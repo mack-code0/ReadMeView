@@ -1,0 +1,365 @@
+.app {
+    width: 100%;
+    height: 100vh;
+    font-family: "Martian Mono";
+
+    .mkd {
+        font-family: "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+        line-height: 1.5;
+
+        h1 {
+            font-size: 2em;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            padding-bottom: 0.3em;
+        }
+
+        p {
+            line-height: 1.625;
+        }
+
+        ul {
+            margin-bottom: 16px;
+            display: block;
+            list-style-type: disc;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            padding-inline-start: 40px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            line-height: 1.25;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+    }
+
+    .control-cent {
+        height: 90px;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+    }
+
+    .right-side {
+        overflow-y: hidden;
+
+        .header {
+            font-family: 'Martian Mono';
+            font-weight: 800;
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        .subHeader {
+            font-family: "Martian Mono";
+            font-weight: 500;
+            font-size: 0.7rem;
+            line-height: 18px;
+            margin: 0;
+        }
+
+        .subHeader-2 {
+            font-family: 'Martian Mono';
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 24px;
+        }
+
+        .details-section {
+            overflow-y: scroll;
+            height: 100%;
+            padding-bottom: 150px !important;
+
+
+            &::-webkit-scrollbar {
+                width: 7px;
+            }
+
+            .input-card {
+                padding-bottom: 8px;
+                display: flex;
+                align-items: center;
+                border-bottom-width: 0.5px;
+                border-bottom-style: solid;
+                margin-bottom: 45px;
+
+                span {
+                    white-space: nowrap;
+                }
+
+                span,
+                input,
+                textarea {
+                    font-family: "Martian Mono";
+                    font-weight: 550;
+                    font-size: 12px;
+                    line-height: 19px;
+                }
+
+                input,
+                textarea {
+                    width: 100%;
+                    padding-left: 3px;
+                    border: none;
+                    outline: none;
+                    box-shadow: none;
+                    appearance: none;
+                    background: none;
+                }
+            }
+        }
+
+        button[type="submit"] {
+            font-family: "Martian Mono";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+        }
+    }
+
+    .left-side {
+        overflow-y: hidden;
+
+        .code-center {
+            height: 100%;
+            overflow-y: scroll;
+            position: relative;
+
+            &::-webkit-scrollbar {
+                width: 0;
+                display: none;
+            }
+
+            .code-txt {
+                white-space: pre-line;
+                word-break: break-all;
+                font-family: "IBM Plex Mono";
+                // letter-spacing: -0.07rem;
+                font-size: .70rem;
+                line-height: 1rem;
+                font-weight: 500;
+            }
+        }
+
+        button {
+            display: flex;
+            align-items: center;
+            outline: none;
+            appearance: none;
+
+            .btn-icon {
+                margin-right: 7px;
+            }
+
+            &.shadowed {
+                border-style: solid;
+                border-width: 2px;
+                font-style: normal;
+                font-weight: 800;
+                padding: 6px 25px;
+                border-radius: 7px;
+                font-size: 13px;
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+    &.lightey {
+        background: $lighteyOpp;
+
+        .control-cent {
+            background: $lighteyOpp;
+            border-bottom-color: $lighteyBorder;
+        }
+
+        .right-side {
+            background: $lightey;
+            border-left: 1px solid $lighteyBorder;
+
+            .header,
+            .subHeader,
+            .subHeader-2 {
+                color: $darkey;
+            }
+
+            .details-section {
+                &::-webkit-scrollbar {
+                    background: $lightey;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    background: $lighteyOpp;
+                }
+
+                .input-card {
+                    border-color: $lighteyBorder;
+
+                    span,
+                    input,
+                    textarea {
+                        color: $lighteyText;
+                    }
+                }
+            }
+
+            button[type="submit"] {
+                background: $darkey !important;
+                color: $lightey !important;
+            }
+        }
+
+        .left-side {
+            .code-txt {
+                color: $lighteyCode;
+            }
+
+            button {
+                &.shadowed {
+                    color: $darkey;
+                    border-color: $darkey;
+                    background: $lightey;
+                    box-shadow: 4px 4px 0px -1px $darkey;
+                }
+            }
+        }
+    }
+
+    &.limey {
+        background: $limeyOpp;
+
+        .control-cent {
+            background: $limeyOpp;
+            border-bottom-color: $limeyOpp;
+        }
+
+        .right-side {
+            background: $limey;
+            border-left: 1px solid $limeyOpp;
+
+
+            .header,
+            .subHeader,
+            .subHeader-2 {
+                color: $limeyOpp;
+            }
+
+            .details-section {
+                &::-webkit-scrollbar {
+                    background: $limey;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    background: $limeyOpp;
+                }
+
+                .input-card {
+                    border-bottom-color: $limeyOpp;
+
+                    span,
+                    input,
+                    textarea {
+                        color: $limeyOpp;
+                    }
+                }
+            }
+
+            button[type="submit"] {
+                background: $limeyOpp !important;
+                color: $lightey !important;
+            }
+        }
+
+        .left-side {
+            .code-txt {
+                color: $darkeyText;
+            }
+
+            button {
+                &.shadowed {
+                    color: $lightey;
+                    border-color: $limey;
+                    background: $limeyOpp;
+                    box-shadow: 4px 4px 0px -1px $limey;
+                }
+            }
+        }
+    }
+
+    &.darkey {
+        background: $darkeyOpp;
+
+        .control-cent {
+            background: $darkeyOpp;
+            border-bottom-color: $lighteyText;
+        }
+
+        .right-side {
+            background: $darkey;
+            border-left: 1px solid $lighteyText;
+
+
+            .header,
+            .subHeader,
+            .subHeader-2 {
+                color: $lightey;
+            }
+
+            .details-section {
+                &::-webkit-scrollbar {
+                    background: $darkey;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    background: $lighteyText;
+                }
+
+                .input-card {
+                    border-bottom-color: $darkeyBorder;
+
+                    span,
+                    input,
+                    textarea {
+                        color: $darkeyText;
+                    }
+                }
+            }
+
+            button[type="submit"] {
+                background: $lighteyOpp !important;
+                color: $darkey !important;
+            }
+        }
+
+        .left-side {
+            .code-txt {
+                color: $darkeyText;
+            }
+
+            button {
+                &.shadowed {
+                    color: $darkeyText;
+                    border-color: $darkeyText;
+                    background: $darkeyOpp;
+                    box-shadow: 4px 4px 0px -1px $darkeyText;
+                }
+            }
+        }
+    }
+}
